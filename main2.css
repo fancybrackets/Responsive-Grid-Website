@@ -1,0 +1,435 @@
+* {
+    box-sizing: border-box ;
+    padding: 0;
+    margin: 0;
+    font-family : arial ; 
+    text-decoration: none;
+}
+
+body {
+    padding : 3rem 3rem ; 
+    background-color: var(--light);
+}
+
+:root {
+   --dark1 : #393646 ; 
+   --dark2 : #4F4557 ; 
+   --dark3 : #6D5D6E ; 
+   --light : #F4EEE0 ;  
+}
+
+
+nav {
+    display: grid;
+    grid-template-columns : repeat(4,1fr) ;
+    grid-gap : 1rem ;
+    background-color: #302b35;
+    
+    padding : 2rem ; 
+    border-radius : 20px 20px 0 0 ; 
+}
+nav a {
+    background-color: var(--dark3);
+    font-size : 1rem ; 
+   
+    padding : .7rem 0; 
+
+    border-radius : 1rem ; 
+    margin-right : .3rem ; 
+    text-align :center ; 
+    text-transform: uppercase;
+    color : var(--light);
+    transition : all .5s ; 
+
+
+}
+nav a:hover {
+    transform: scale(1.2);
+    background-color : #4F4557 ; 
+}
+
+
+
+.bannersection {
+    display : grid ;
+    grid-template-areas: "banner banner banner banner" 
+                         "content1 content2 content3 content4 "
+                        ; 
+                        
+    grid-template-rows : 15rem ;
+    
+
+
+}
+
+
+
+.bannersection header {
+    background-image: url("https://thumbs.dreamstime.com/b/business-cogs-technology-background-banner-computer-circuits-56974243.jpg");
+
+  
+     
+    
+    background-size :cover;
+    background-repeat: no-repeat ; 
+    background-position: center;
+    grid-area : banner ;
+   
+    display : flex ; 
+    justify-content :center ; 
+    align-items: center;
+    
+}
+
+
+
+
+.bannersection header div {
+
+    width : 30% ; 
+    margin : 0 auto ; 
+    padding : 1rem ; 
+    display : flex ; 
+    flex-wrap : wrap ; 
+    flex-direction: column;
+    justify-content : center ; 
+    align-items: center;
+    background-color: var(--dark1);
+    border-radius: 10px;
+    min-width : 200px ;
+    text-align :center;
+}
+
+.bannersection header div h1 {
+    color : white ; 
+    font-size : 2vw ; 
+    padding-bottom : .3rem ;
+
+}
+
+.bannersection header div p  {
+    color : aliceblue ; 
+    font-size : 1rem ; 
+    padding-bottom : .3rem ;
+}
+
+.bannersection header div a  {
+    color : aliceblue ; 
+    font-size : 1rem ; 
+    background-color: #6D5D6E;
+    padding : 1rem 2rem ; 
+    border-radius: 10px;
+    transition : all .5s ; 
+}
+
+.bannersection header div a:hover {
+    transform : scale(1.2)
+}
+
+.bannersection .content  {
+    text-align: center;
+    background-color: var(--dark1);
+    color : white;
+    padding : 2rem ;
+
+   
+}
+
+.bannersection .content1 {
+    
+    grid-area :content1 ; 
+    border-right : 1px solid white ; 
+
+}
+
+
+
+.bannersection .content2 {
+
+
+    grid-area : content2 ; 
+    border-right : 1px solid white ; 
+
+}
+
+.bannersection .content3 {
+ 
+    grid-area :content3 ; 
+    border-right : 1px solid white ; 
+
+}
+
+.bannersection .content4 {
+  
+    grid-area :content4 ; 
+
+
+}
+
+
+
+
+section.features div {
+    background-color:var(--dark2);
+    text-align: center;
+    color : aliceblue ; 
+    padding: 2rem  ; 
+    
+}
+
+
+section.features div:first-child {
+
+    border-radius : 0 0 0 20px ; 
+}
+
+
+section.features div:nth-child(4) {
+    border-radius : 0 0 20px 0 
+}
+
+section.features div h3 {
+    padding-bottom :.5rem ; 
+}
+
+section.features .fa {
+    font-size : 4rem ; 
+    padding-bottom : 1rem ; 
+}
+
+section.features {
+    display : grid ;
+    grid-template-columns: repeat(auto-fit , minmax(200px,1fr) );
+
+}
+
+
+
+
+
+
+
+
+section.learnmore {
+    display : grid  ;
+    grid-template-columns : repeat(2,  minmax(300px,1fr) ) ; 
+    grid-template-rows : repeat(2 , minmax(300px,1fr)) ; 
+    background-color: var(--dark1);
+    padding : 3rem  ;
+    margin-top : .5rem ; 
+    border-radius : 20px ; 
+    justify-items : center ; 
+    color : aliceblue ; 
+    align-items: center;
+    grid-gap :2rem ; 
+ 
+}
+
+.learnmore img {
+   
+    object-fit: cover;
+   
+   width: 100%;
+   height : 100% ; 
+    grid-area :  1/ 1/ 3/2 ;
+
+
+
+}
+
+.learnmore h3 {
+    font-size : 2rem ; 
+    padding-bottom :1rem ; 
+}
+
+
+.learnmore p {
+    font-size : 1rem ; 
+}
+
+.learnmore a {
+    padding : 1rem 2rem ;
+    background-color: #6D5D6E;
+    font-size : 1.5rem ;
+    text-decoration: none;
+    color : white ; 
+    border-radius : 5px ; 
+    margin-top : 30px  ;
+    display : inline-block ;
+    transition : all 1s ; 
+}
+
+.learnmore a:hover {
+  
+    font-size : 2rem ; 
+
+}
+
+.learnmore .content2 {
+    grid-row : 2 / 3 ; 
+    grid-column : 2 / 3 ; 
+}
+
+
+
+
+
+
+
+    .portfolio {
+        display : grid  ; 
+        grid-template-columns: repeat(auto-fit , minmax(200px,1fr));
+     margin-top : .5rem ;
+     grid-gap : .5rem ;  
+
+    }
+
+    .portfolio img {
+   width: 100%;
+   border-radius: 10px;
+   transition : all .5s ; 
+    }
+    .portfolio img:hover {
+        transform: scale(1.2);
+    }
+
+
+
+
+
+
+    footer {
+        width : 100% ; 
+        background-color: var(--dark1);
+        padding : 2rem ;
+        display : flex ; 
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+        border-radius: 10px;
+        margin-top : 10px  ; 
+    }
+
+    footer p {
+        font-size : 1.3rem ;
+        color : aliceblue ; 
+        padding :.3rem; 
+    }
+
+    footer i {
+        color : whitesmoke
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width : 1024px) {
+
+    .bannersection header div h1 {
+        font-size : 2rem ; 
+    }
+    .bannersection header div p {
+        font-size : 1rem;
+    }
+
+    
+
+
+
+}
+
+
+
+
+@media (max-width : 814px) {
+
+    html {
+       
+        font-size:90.5%;
+    }
+
+    nav {
+        grid-template-columns: 1fr;
+    }
+
+    .bannersection {
+        grid-template-areas: "banner banner banner banner" 
+                             "content1 content1 content2 content2 "
+                             "content3 content3 content4 content4"
+                            }   
+        .bannersection .content1 {
+            border-bottom : 1px solid white ; 
+        }
+        .bannersection  .content2 {
+            border-bottom : 1px solid white ; 
+        }
+
+        section.features {
+
+            grid-template-columns: repeat(2, minmax(200px,1fr) );
+        
+        }
+
+        section.features div:nth-child(3) {
+            border-radius : 0 0 0 20px ; 
+        }
+        section.features div:nth-child(1) {
+            border-radius : 0 0 0 0 ; 
+        }
+
+        section.learnmore {
+        grid-template-columns : repeat(1 ,1fr) ; 
+        grid-template-rows: 2fr repeat(2 , 1fr);
+        }
+        .learnmore img {
+            grid-area :initial ; 
+        }
+
+        .learnmore .content2 {
+                 grid-area :initial ; 
+        }
+
+
+
+
+}
+
+
+@media (max-width : 500px) { 
+
+
+    html {
+        font-size : 80% ; 
+    }
+
+    .bannersection { 
+        grid-template-areas: "banner banner banner banner" 
+                             "content1 content1 content1 content1 "
+                             "content2 content2 content2 content2"
+                             "content3 content3 content3 content3 "
+                             "content4 content4 content4 content4"
+    }
+
+    section.features {
+        grid-template-columns: repeat(auto-fit , minmax(200px,1fr));
+    }
+    .bannersection .content3  {
+        border-bottom: 1px solid white ; ;
+    }
+
+    section.features div:nth-child(3) {
+        border-radius : 0 ;
+    } 
+}
+
+
